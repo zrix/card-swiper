@@ -33,37 +33,19 @@ function App() {
         onTouchStart={(event) => {
           absXStart = event.touches[0].screenX
         }}
-        onTouchMove={(event) => {
-          //console.log(event.changedTouches[0].screenX)
-          //absX += event.touchList[0].clientX
-          //console.log(absX)
-          //console.log(event.touches[0].clientX)
-          //console.log(event.currentTarget())
-        }}
         onTouchEnd={scrollTo}
         onTouchCancel={scrollTo}
       >
         <div className="card" ref={cards[0]}>
+          <p>0</p>
         </div>
         <div className="card" ref={cards[1]}>
+          <p>1</p>
         </div>
         <div className="card" ref={cards[2]}>
+          <p>2</p>
         </div>
       </div>
-
-      <div className="abs-btn">
-        <button onClick={(e) => {
-          cards[1].current.scrollIntoView({
-            behavior: 'smooth',
-            block: "center",
-            inline: "center"
-          });
-        }
-        }>
-          Press me
-        </button>
-      </div>
-
     </>
   );
 }

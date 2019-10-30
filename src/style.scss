@@ -27,6 +27,10 @@ body, html {
   background-color: lightblue;
   border: 2px solid darkcyan;
   border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
   //margin-left: 5vw;
   //background-image: url("https://source.unsplash.com/random/400x800");
   //background-size: cover;
