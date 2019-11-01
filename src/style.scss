@@ -1,74 +1,92 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
-
-$item-size: 90%;
-$item-gap: 10px;
-
-@mixin size($height, $width: $height) {
-  height: $height;
-  width: $width;
+.body{
+    margin: 0px;
+    padding: 0px;
 }
 
-* {
-  &,
-  &:before,
-  &:after {
-    box-sizing: border-box;
-  }
+.container {
+  height: 200vh;
+  background-color: grey;
 }
 
-html,
-body {
-  @include size(100%, 100%);
+.parallax1 {
+  width: 20rem;
+  height: 20rem;
+  //background-color: lightseagreen;
+}
+
+.parallax2 {
+  width: 20rem;
+  height: 10rem;
+  //background-color: lightsalmon;
+}
+
+.small {
+  width: 10%;
+  margin: 6rem;
+}
+
+.smallLinear {
+  margin: 0.2rem;
+  width: 5rem;
+}
+
+.elements {
+  height: 100%;
+  width: 100%;
   display: flex;
-  font-family: 'Roboto', sans-serif;
-  justify-content: center;
-}
-
-.wrapper {
-  @include size(100%);
-}
-
-.content {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-}
-
-.title {
-  background-color: #c60000;
-  border-bottom: solid 1px #000;
-  color: #fff;
-  font-size: 2rem;
-  margin-bottom: 10px;
-  padding: 10px;
-}
-
-.scroll {
-  @include size(50vh, 50vw);
-  border: solid 5px #000;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  margin: auto;
-  overflow-x: auto;
-  overflow-y: hidden;
-  padding: 0 $item-gap;
-  scroll-snap-type: x mandatory;
-}
-
-.item {
-  -webkit-overflow-scrolling: touch;
+  flex-flow: row wrap;
   align-items: center;
-  border: solid 2px #c60000;
-  display: flex;
-  height: 90%;
-  justify-content: center;
-  margin: auto ($item-gap / 2);
-  overflow: hidden;
-  scroll-snap-align: center;
-  width: 90%;
+  justify-content: space-around;
+}
 
-  img {
-    height: 100%;
-  }
+.elementsHorizontal {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-flow: column nowrap;
+}
+
+.linear {
+  flex-flow: row nowrap;
+  justify-content: space-around;
+}
+
+.linearHorizontal {
+  flex-flow: row nowrap;
+  flex-flow: column nowrap;
+}
+
+.ratio {
+  //display: flex;
+  //position: relative;
+  width: 50vw;
+  height: 50vh;
+  padding-top: 100%;
+}
+
+.inner {
+  //position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  /* display: flex;
+  align-items: center;
+  justify-content: center;
+  background: slateblue; */
+}
+
+.box {
+  width: 100%;
+  height: 100%;
+  border-radius: 1.5rem;
+  text-align: center;
+  line-height: 3rem;
+  color: #333;
+  font-weight: bold;
+  //background: lightgreen;
+  border: 2px solid black;
 }

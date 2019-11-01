@@ -1,100 +1,34 @@
-import React from 'react';
+import React from 'react'
+import { ParallaxProvider, Parallax } from 'react-scroll-parallax'
 
+//import styles from "./style.scss"
 import "./style.scss"
+//console.log(styles)
 
-function App() {
-
+const App = () => {
   return (
-    <section className="wrapper">
+    <div className="container">
+      <ParallaxProvider scrollAxis="vertical">
+        <Parallax y={["-0%", "0%"]} className="parallax1">
+          <Element name="A" />
+        </Parallax>
+        <Parallax y={["90%", "-90%"]} className="parallax2">
+          <Element name="B" />
+        </Parallax>
+      </ParallaxProvider>
+    </div>
+  )
+}
 
-      <main className="content">
-        <h1 className="title">X axis scroll</h1>
-        <ul className="scroll">
-          <li className="item">
-            <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/44572/IMG_0115.jpg" alt="" title="" /></div>
-          </li>
-          <li className="item">
-            <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/44572/IMG_1151.jpg" alt="" title="" /></div>
-          </li>
-          <li className="item">
-            <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/44572/IMG_0121.jpg" alt="" title="" /></div>
-          </li>
-          <li className="item">
-            <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/44572/IMG_0115.jpg" alt="" title="" /></div>
-          </li>
-          <li className="item">
-            <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/44572/IMG_1151.jpg" alt="" title="" /></div>
-          </li>
-          <li className="item">
-            <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/44572/IMG_0121.jpg" alt="" title="" /></div>
-          </li>
-          <li className="item">
-            <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/44572/IMG_0115.jpg" alt="" title="" /></div>
-          </li>
-          <li className="item">
-            <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/44572/IMG_1151.jpg" alt="" title="" /></div>
-          </li>
-          <li className="item">
-            <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/44572/IMG_0121.jpg" alt="" title="" /></div>
-          </li>
-          <li className="item">
-            <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/44572/IMG_0115.jpg" alt="" title="" /></div>
-          </li>
-          <li className="item">
-            <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/44572/IMG_1151.jpg" alt="" title="" /></div>
-          </li>
-          <li className="item">
-            <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/44572/IMG_0121.jpg" alt="" title="" /></div>
-          </li>
-          <li className="item">
-            <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/44572/IMG_0115.jpg" alt="" title="" /></div>
-          </li>
-          <li className="item">
-            <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/44572/IMG_1151.jpg" alt="" title="" /></div>
-          </li>
-          <li className="item">
-            <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/44572/IMG_0121.jpg" alt="" title="" /></div>
-          </li>
-          <li className="item">
-            <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/44572/IMG_0115.jpg" alt="" title="" /></div>
-          </li>
-          <li className="item">
-            <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/44572/IMG_1151.jpg" alt="" title="" /></div>
-          </li>
-          <li className="item">
-            <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/44572/IMG_0121.jpg" alt="" title="" /></div>
-          </li>
-          <li className="item">
-            <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/44572/IMG_0115.jpg" alt="" title="" /></div>
-          </li>
-          <li className="item">
-            <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/44572/IMG_1151.jpg" alt="" title="" /></div>
-          </li>
-          <li className="item">
-            <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/44572/IMG_0121.jpg" alt="" title="" /></div>
-          </li>
-          <li className="item">
-            <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/44572/IMG_0115.jpg" alt="" title="" /></div>
-          </li>
-          <li className="item">
-            <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/44572/IMG_1151.jpg" alt="" title="" /></div>
-          </li>
-          <li className="item">
-            <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/44572/IMG_0121.jpg" alt="" title="" /></div>
-          </li>
-          <li className="item">
-            <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/44572/IMG_0115.jpg" alt="" title="" /></div>
-          </li>
-          <li className="item">
-            <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/44572/IMG_1151.jpg" alt="" title="" /></div>
-          </li>
-          <li className="item">
-            <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/44572/IMG_0121.jpg" alt="" title="" /></div>
-          </li>
-        </ul>
-      </main>
-    </section>
+function Element(props) {
+  return (
+    <div className="ratio">
+      <div className="inner">
+        <div className="box">{props.name}</div>
+        {props.children}
+      </div>
+    </div>
   );
 }
 
-export default App;
+export default App
