@@ -1,92 +1,34 @@
-.body{
+html, body{
     margin: 0px;
     padding: 0px;
 }
 
-.container {
-  height: 200vh;
-  background-color: grey;
+.container{
+    height: 100vh;
+    //position: relative;
+    //background-color: lightsalmon;
 }
 
-.parallax1 {
-  width: 20rem;
-  height: 20rem;
-  //background-color: lightseagreen;
+.center{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 60px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-.parallax2 {
-  width: 20rem;
-  height: 10rem;
-  //background-color: lightsalmon;
+.parallax1{
+    height: 150%;
+    width: 100vw;
+    background-color: lightseagreen;
+    position: absolute;
 }
 
-.small {
-  width: 10%;
-  margin: 6rem;
-}
-
-.smallLinear {
-  margin: 0.2rem;
-  width: 5rem;
-}
-
-.elements {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-flow: row wrap;
-  align-items: center;
-  justify-content: space-around;
-}
-
-.elementsHorizontal {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  flex-flow: column nowrap;
-}
-
-.linear {
-  flex-flow: row nowrap;
-  justify-content: space-around;
-}
-
-.linearHorizontal {
-  flex-flow: row nowrap;
-  flex-flow: column nowrap;
-}
-
-.ratio {
-  //display: flex;
-  //position: relative;
-  width: 50vw;
-  height: 50vh;
-  padding-top: 100%;
-}
-
-.inner {
-  //position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-
-  /* display: flex;
-  align-items: center;
-  justify-content: center;
-  background: slateblue; */
-}
-
-.box {
-  width: 100%;
-  height: 100%;
-  border-radius: 1.5rem;
-  text-align: center;
-  line-height: 3rem;
-  color: #333;
-  font-weight: bold;
-  //background: lightgreen;
-  border: 2px solid black;
+.parallax2{
+    height: 150%;
+    width: 100vw;
+    background-color: lightslategrey;
+    position: absolute;
+    opacity: 0.5;
 }

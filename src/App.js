@@ -9,26 +9,39 @@ const App = () => {
   return (
     <div className="container">
       <ParallaxProvider scrollAxis="vertical">
-        <Parallax y={["-0%", "0%"]} className="parallax1">
-          <Element name="A" />
+        <Parallax y={["-50%", "50%"]} className="parallax1 center">
+          <p>Hello1</p>
+          <p>Hello1</p>
+          <p>Hello1</p>
+          <p>Hello1</p>
+          <p>Hello1</p>
+          <p>Hello1</p>
+          <p>Hello1</p>
         </Parallax>
-        <Parallax y={["90%", "-90%"]} className="parallax2">
-          <Element name="B" />
+        <Parallax y={["50%", "-50%"]} className="parallax2 center">
+          <p>Hello2</p>
+          <p>Hello2</p>
+          <p>Hello2</p>
+          <p>Hello2</p>
+          <p>Hello2</p>
+          <p>Hello2</p>
+          <p>Hello2</p>
+          <p>Hello2</p>
+        </Parallax>
+        <Parallax y={["80%", "-80%"]} className="parallax2 center">
+          <p>Hello2</p>
+          <p>Hello2</p>
+          <p>Hello2</p>
+          <p>Hello2</p>
+          <p>Hello2</p>
+          <p>Hello2</p>
+          <p>Hello2</p>
+          <p>Hello2</p>
         </Parallax>
       </ParallaxProvider>
     </div>
   )
 }
 
-function Element(props) {
-  return (
-    <div className="ratio">
-      <div className="inner">
-        <div className="box">{props.name}</div>
-        {props.children}
-      </div>
-    </div>
-  );
-}
 
 export default App
